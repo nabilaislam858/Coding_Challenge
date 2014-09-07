@@ -1,0 +1,22 @@
+<h2>
+	Subject: 
+</h2>
+
+<table class="table table-striped">
+	<thead>
+        <tr> 
+            <th>School</th>
+            <th>Y3</th>
+            <th>Y5</th>
+            <th>Y7</th>
+            <th>Y9</th>
+        </tr>
+    </thead>
+	<tr ng-repeat="result in results">
+		<td>{{result.school.schoolName}}</td>
+		<td>{{result.latestY3}}</td>
+		<td>{{result.latestY5}}</td>
+		<td>{{result.latestY7}}</td>
+		<td>{{result.latestY9}}</td>
+	</tr>
+</table>
