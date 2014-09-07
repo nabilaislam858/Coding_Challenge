@@ -4,8 +4,7 @@ Coding Challenge
 Oracle Apex
 ------------
 •	This application is built using oacle APEX application 4.2.1 and Oracle database XE sample data. (HR schema)
-• Login application user id = admin and password = Nabila#2 
-------------
+
 
 Jasper iReport
 --------------
