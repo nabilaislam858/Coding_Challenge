@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="604cfb16-1224-45d1-adb1-531597b692aa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="52"/>
+	<queryString>
+		<![CDATA[SELECT
+     "LOCATIONS"."LOCATION_ID" AS LOCATION_ID,
+     "LOCATIONS"."STREET_ADDRESS" AS STREET_ADDRESS,
+     "LOCATIONS"."POSTAL_CODE" AS POSTAL_CODE,
+     "LOCATIONS"."CITY" AS CITY,
+     "LOCATIONS"."STATE_PROVINCE" AS STATE_PROVINCE,
+     "LOCATIONS"."COUNTRY_ID" AS COUNTRY_ID,
+     "COUNTRIES"."COUNTRY_NAME" AS COUNTRY_ID
+FROM
+     "LOCATIONS",
+     "COUNTRIES"
+WHERE
+     LOCATIONS.COUNTRY_ID = COUNTRIES.COUNTRY_ID]]>
+	</queryString>
+	<field name="LOCATION_ID" class="java.math.BigDecimal"/>
+	<field name="STREET_ADDRESS" class="java.lang.String"/>
+	<field name="POSTAL_CODE" class="java.lang.String"/>
+	<field name="CITY" class="java.lang.String"/>
+	<field name="STATE_PROVINCE" class="java.lang.String"/>
+	<field name="COUNTRY_ID" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5742e4fa-776f-450b-af0e-7cf4e646fc89" x="0" y="0" width="92" height="20"/>
+				<textElement/>
+				<text><![CDATA[LOCATION_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e253c939-114d-47aa-939e-dc3fd5af8958" x="92" y="0" width="92" height="20"/>
+				<textElement/>
+				<text><![CDATA[STREET_ADDRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="86a54049-33b8-4c0a-85c3-8b679bac8b99" x="184" y="0" width="92" height="20"/>
+				<textElement/>
+				<text><![CDATA[POSTAL_CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b5569cfb-72a4-4a7f-bae7-8fb2b8564fc5" x="276" y="0" width="92" height="20"/>
+				<textElement/>
+				<text><![CDATA[CITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e2ddcc5b-4fae-4c69-a41e-608c9e162132" x="368" y="0" width="92" height="20"/>
+				<textElement/>
+				<text><![CDATA[STATE_PROVINCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="08102f24-ab35-496e-812d-805f4bc98168" x="460" y="0" width="92" height="20"/>
+				<textElement/>
+				<text><![CDATA[COUNTRY_ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="4961fa55-053a-464b-a4ca-ceeca3d6e028" x="0" y="0" width="92" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LOCATION_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="21178063-ce11-4a56-988e-71b7be60d135" x="92" y="0" width="92" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{STREET_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d7a29370-bef1-442c-8e4e-a3f5b86616a1" x="184" y="0" width="92" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{POSTAL_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="931806f9-2e62-4341-b80d-9bd5849200f9" x="276" y="0" width="92" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{CITY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2a804811-1a67-4a20-ab5e-ac8a86d87bf2" x="368" y="0" width="92" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{STATE_PROVINCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="695d8e4a-5c6e-4eba-ad34-e5dc212a26fa" x="460" y="0" width="92" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{COUNTRY_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
